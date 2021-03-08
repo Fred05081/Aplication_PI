@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ficheiros">
+
+    <Button
+        android:id="@+id/infoMaquina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/titulo"
+        android:layout_marginTop="130dp"
+        android:text="Informações da máquina"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:backgroundTint="#FDFDFD" />
+
+    <Button
+        android:id="@+id/foto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/infoMaquina"
+        android:layout_marginTop="50dp"
+        android:text="Fotografias"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:backgroundTint="#FDFDFD" />
+
+    <Button
+        android:id="@+id/videos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/foto"
+        android:layout_marginTop="50dp"
+        android:text="Vídeos"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:backgroundTint="#FDFDFD" />
+
+    <Button
+        android:id="@+id/pdf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/videos"
+        android:layout_marginTop="50dp"
+        android:text="PDF manutenção"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:backgroundTint="#FDFDFD" />
+
+    <TextView
+        android:id="@+id/titulo"
+        android:text="Ficheiros da Máquina"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="50sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal" />
+</RelativeLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/ot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/titulo"
+        android:layout_marginTop="130dp"
+        android:text="Ordens de Trabalho"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:backgroundTint="#FDFDFD" />
+
+    <Button
+        android:id="@+id/ficheiros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/ot"
+        android:layout_marginTop="130dp"
+        android:text="Ficheiros"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:backgroundTint="#FDFDFD" />
+
+    <Button
+        android:id="@+id/historico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/ficheiros"
+        android:layout_marginTop="130dp"
+        android:text="Histórico"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:backgroundTint="#FDFDFD" />
+
+    <TextView
+        android:id="@+id/titulo"
+        android:text="Máquina xxxx"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="50sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal" />
+</RelativeLayout>
