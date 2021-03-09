@@ -1,9 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".lista_ota">
+    tools:context=".MainActivity"
+    android:background="@color/Red">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:id="@+id/ButtonsBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titulo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="57dp">
+
+        <RelativeLayout
+            android:id="@+id/BotoesDeCima"
+            android:layout_width="374dp"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/ot1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Ordem de trabalho x"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                app:backgroundTint="#FDFDFD" />
+
+            <Button
+                android:id="@+id/ot2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ot1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="Ordem de trabalho y"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                app:backgroundTint="#FDFDFD" />
+
+            <Button
+                android:id="@+id/ot3"
+                android:layout_width="363dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ot2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="Ordem de trabalho z"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                app:backgroundTint="#FDFDFD" />
+
+            <Button
+                android:id="@+id/ot4"
+                android:layout_width="363dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ot3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="Ordem de trabalho w"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                app:backgroundTint="#FDFDFD" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/BotoesDeBaixo"
+            android:layout_width="381dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/BotoesDeCima"
+            android:layout_marginTop="141dp">
+
+            <Button
+                android:id="@+id/ultimas_man"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:text="@string/UltimasManutencoes"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                app:backgroundTint="#FDFDFD" />
+
+
+            <Button
+                android:id="@+id/criar_ot"
+                android:layout_width="368dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ultimas_man"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="@string/NovaOT"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                app:backgroundTint="#FDFDFD" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/titulo"
+        android:text="@string/OTAs"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="50sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal" />
+</RelativeLayout>

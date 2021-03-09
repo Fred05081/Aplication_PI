@@ -4,64 +4,73 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ficheiros">
+    tools:context=".Menu"
+    android:background="@color/Red">
 
-    <Button
-        android:id="@+id/infoMaquina"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:id="@+id/OpcoesFicheiros"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/titulo"
-        android:layout_marginTop="130dp"
-        android:text="Informações da máquina"
-        android:textColor="#000000"
-        android:textSize="25sp"
-        app:backgroundTint="#FDFDFD" />
+        android:layout_marginTop="60dp"
+        android:layout_below="@id/titulo">
 
-    <Button
-        android:id="@+id/foto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/infoMaquina"
-        android:layout_marginTop="50dp"
-        android:text="Fotografias"
-        android:textColor="#000000"
-        android:textSize="25sp"
-        app:backgroundTint="#FDFDFD" />
+        <Button
+            android:id="@+id/infoMaquina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/InfoMaquina"
+            android:textColor="#000000"
+            android:textSize="25sp"
+            app:backgroundTint="#FDFDFD" />
 
-    <Button
-        android:id="@+id/videos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/foto"
-        android:layout_marginTop="50dp"
-        android:text="Vídeos"
-        android:textColor="#000000"
-        android:textSize="25sp"
-        app:backgroundTint="#FDFDFD" />
+        <Button
+            android:id="@+id/foto"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@id/infoMaquina"
+            android:layout_marginTop="50dp"
+            android:text="@string/Fotos"
+            android:textColor="#000000"
+            android:textSize="25sp"
+            app:backgroundTint="#FDFDFD" />
 
-    <Button
-        android:id="@+id/pdf"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/videos"
-        android:layout_marginTop="50dp"
-        android:text="PDF manutenção"
-        android:textColor="#000000"
-        android:textSize="25sp"
-        app:backgroundTint="#FDFDFD" />
+        <Button
+            android:id="@+id/videos"
+            android:layout_width="260dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/foto"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:text="@string/Videos"
+            android:textColor="#000000"
+            android:textSize="25sp"
+            app:backgroundTint="#FDFDFD" />
+
+        <Button
+            android:id="@+id/pdf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/videos"
+            android:layout_marginTop="50dp"
+            android:text="@string/PDF"
+            android:textColor="#000000"
+            android:textSize="25sp"
+            app:backgroundTint="#FDFDFD" />
+
+    </RelativeLayout>
+
 
     <TextView
         android:id="@+id/titulo"
-        android:text="Ficheiros da Máquina"
         android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="50sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:text="@string/FicheirosMaquina"
+        android:textColor="#000000"
+        android:textSize="50sp"
         android:gravity="center_horizontal" />
+
 </RelativeLayout>

@@ -11,16 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Qrcode2">
-        <activity android:name=".foto"></activity>
-        <activity android:name=".ordem_trabalho" />
-        <activity android:name=".qrcode" />
-        <activity android:name=".lista_ota" />
-        <activity android:name=".avaria" />
+        <activity android:name=".avaria"></activity>
         <activity android:name=".info" />
         <activity android:name=".video" />
         <activity android:name=".pdf" />
         <activity android:name=".historico" />
-        <activity android:name=".ficheiros" />
+        <activity android:name=".Menu" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

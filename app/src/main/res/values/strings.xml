@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">Qrcode2</string>
+    <string name="InfoMaquina">Informações da Máquina</string>
+    <string name="Fotos">Fotografias</string>
+    <string name="Videos">Videos</string>
+    <string name="PDF">PDF Manutenção</string>
+    <string name="FicheirosMaquina">Ficheiros da Máquina</string>
+    <string name="IconHuf">Huf Portuguesa</string>
+    <string name="ScannerIcon">Icon do Scanner</string>
+    <string name="MaquinaIcon">Maquina Icon</string>
+    <string name="VideoIcon">Videochamada Icon</string>
+    <string name="QRcodeScanner">Scan QRcode</string>
+    <string name="ID">ID Máquina:</string>
+    <string name="IdMaquina">Next</string>
+    <string name="Videochamada">Videochamada</string>
+    <string name="Manutenção">Manutenção</string>
+    <string name="OTAs">Ordens de Trabalho Abertas</string>
+    <string name="UltimasManutencoes">Últimas Manutenções</string>
+    <string name="NovaOT">Criar Ordem de Trabalho</string>
+    <string name="OTs">Ordens de Trabalho</string>
+    <string name="Historico">Histórico</string>
+    <string name="Files">Ficheiros</string>
 </resources>

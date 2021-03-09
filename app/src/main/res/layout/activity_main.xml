@@ -4,50 +4,123 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/Red">
 
-
-    <Button
-        android:id="@+id/Scann"
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_below="@id/titulo"
-        android:layout_marginTop="130dp"
-        android:text="Scan Qrcode"
-        android:textColor="#000000"
-        android:textSize="25sp"
-        app:backgroundTint="#FDFDFD" />
-
-    <Button
-        android:id="@+id/id_maquina"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/Scann"
-        android:layout_marginTop="130dp"
-        android:text="ID manual"
-        android:textColor="#000000"
-        android:textSize="25sp"
-        app:backgroundTint="#FDFDFD" />
+        android:layout_marginTop="40dp">
 
-    <Button
-        android:id="@+id/videochamada"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/id_maquina"
-        android:layout_marginTop="130dp"
-        android:text="Videochamada"
-        android:textColor="#000000"
-        android:textSize="25sp"
-        app:backgroundTint="#FDFDFD" />
+        <RelativeLayout
+            android:id="@+id/ScanBox"
+            android:layout_width="252dp"
+            android:layout_height="165dp"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:id="@+id/ScanIcon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/scanner"
+                android:contentDescription="@string/ScannerIcon"/>
+
+            <Button
+                android:id="@+id/scann"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/ScanIcon"
+                android:layout_marginTop="5dp"
+                android:text="@string/QRcodeScanner"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                app:backgroundTint="#FDFDFD" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/MaquinaBox"
+            android:layout_width="251dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ScanBox"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:id="@+id/MaquinaIcon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/machine"
+                android:contentDescription="@string/MaquinaIcon"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ID"
+                android:layout_below="@id/MaquinaIcon"
+                android:hint="@string/ID"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:inputType="number"
+                android:autofillHints="@string/ID"/>
+
+            <Button
+                android:id="@+id/id_maquina"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/ID"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="@string/IdMaquina"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                app:backgroundTint="#FDFDFD" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/VideochamadaBox"
+            android:layout_below="@id/MaquinaBox"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:id="@+id/VideoIcon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_videochamada"
+                android:contentDescription="@string/VideoIcon"/>
+
+            <Button
+                android:id="@+id/videochamada"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/VideoIcon"
+                android:text="@string/Videochamada"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                app:backgroundTint="#FDFDFD"
+                android:layout_marginTop="5dp"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
 
     <TextView
         android:id="@+id/titulo"
-        android:text="Manutenção"
+        android:text="@string/Manutenção"
         android:textAlignment="center"
         android:textColor="#000000"
+        android:layout_marginTop="5dp"
         android:textSize="50sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

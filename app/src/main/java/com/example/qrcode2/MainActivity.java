@@ -15,12 +15,14 @@ import com.google.zxing.integration.android.IntentResult;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.awt.font.TextAttribute;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private IntentIntegrator qrScan;
-    private Button buttonScan,id_maquina, video;
+    private Button buttonScan;
     public String id=null;
     public int num=0;
-
+    private TextView texto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,24 +30,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         buttonScan = findViewById(R.id.Scann);
-        id_maquina=findViewById(R.id.id_maquina);
-        video=findViewById(R.id.videochamada);
+        texto=findViewById(R.id.texto);
 
         qrScan = new IntentIntegrator(this);
         buttonScan.setOnClickListener(this);
-        id_maquina.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                open2();
-            }
-        });
-
-        video.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                open3();
-            }
-        });
+        openButtScan();
 
 
     }
@@ -63,9 +52,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     //converting the data to json
                     JSONObject obj = new JSONObject(result.getContents());
                     //setting values to textviews
-
+                    texto.setText(obj.getString("id"));
                     id=obj.getString("id");
-
+                    openButtScan();
                 } catch (JSONException e) {
                     e.printStackTrace();
                     //if control comes here
@@ -84,16 +73,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         qrScan.initiateScan();
 
     }
+    public void openButtScan(){
 
-    public void open2(){
-        Intent intent=new Intent(this,qrcode.class);
-
-        startActivity(intent);
-
-    }
-    public void open3(){
-        Intent intent=new Intent(this,video.class);
-
+        Intent intent=new Intent(this, Menu.class);
+       
         startActivity(intent);
 
     }

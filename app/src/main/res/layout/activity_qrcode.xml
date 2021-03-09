@@ -4,43 +4,85 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/Red">
 
-    <Button
-        android:id="@+id/ot"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/titulo"
-        android:layout_marginTop="130dp"
-        android:text="Ordens de Trabalho"
-        android:textColor="#000000"
-        android:textSize="25sp"
-        app:backgroundTint="#FDFDFD" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layout2"
+        android:layout_below="@id/titulo">
 
-    <Button
-        android:id="@+id/ficheiros"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/ot"
-        android:layout_marginTop="130dp"
-        android:text="Ficheiros"
-        android:textColor="#000000"
-        android:textSize="25sp"
-        app:backgroundTint="#FDFDFD" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/CaixaBotoes"
+            android:layout_centerInParent="true">
 
-    <Button
-        android:id="@+id/historico"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/ficheiros"
-        android:layout_marginTop="130dp"
-        android:text="Histórico"
-        android:textColor="#000000"
-        android:textSize="25sp"
-        app:backgroundTint="#FDFDFD" />
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:id="@+id/otIcon"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_ordemtrabalho"
+                android:contentDescription="@string/OTs"/>
+
+            <Button
+                android:id="@+id/ot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/otIcon"
+                android:layout_centerHorizontal="true"
+                android:text="@string/OTs"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                app:backgroundTint="#FDFDFD" />
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/ot"
+                android:id="@+id/FicheirosIcon"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_ficheiros"
+                android:contentDescription="@string/FicheirosMaquina"/>
+
+            <Button
+                android:id="@+id/ficheiros"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/FicheirosIcon"
+                android:text="@string/Files"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                app:backgroundTint="#FDFDFD" />
+
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/ficheiros"
+                android:id="@+id/HistoricoIcon"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_historico"
+                android:contentDescription="@string/Historico"/>
+            <Button
+                android:id="@+id/historico"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/HistoricoIcon"
+                android:text="@string/Historico"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                app:backgroundTint="#FDFDFD" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
 
     <TextView
         android:id="@+id/titulo"
@@ -50,6 +92,7 @@
         android:textSize="50sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
         android:gravity="center_horizontal" />
 </RelativeLayout>
