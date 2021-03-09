@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/Red">
+
+
+    <TextView
+        android:id="@+id/titulo"
+        android:text="Ordem de Trabalho Aberta"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="50sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/Caixa"
+        android:layout_below="@id/titulo">
+
+        <RelativeLayout
+            android:id="@+id/CaixaBotoes"
+            android:layout_width="371dp"
+            android:layout_height="549dp"
+            android:layout_centerInParent="true">
+
+
+            <Button
+                android:id="@+id/VerFicheiros"
+                android:layout_width="338dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Ver Ficheiros"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                app:backgroundTint="#FDFDFD" />
+
+            <Button
+                android:id="@+id/add_ficheiro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/VerFicheiros"
+                android:layout_marginTop="10dp"
+                android:text="Adicionar ficheiros"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                app:backgroundTint="#FDFDFD" />
+
+            <Button
+                android:id="@+id/terminarot"
+                android:layout_width="340dp"
+                android:layout_height="85dp"
+                android:layout_below="@id/add_ficheiro"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="Terminar ordem de trabalho"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                app:backgroundTint="#FDFDFD" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+
