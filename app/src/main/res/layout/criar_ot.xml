@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/Red">
+
+
+    <TextView
+        android:id="@+id/titulo"
+        android:text="Criar Ordem de Trabalho"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="50sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/Caixa"
+        android:layout_below="@id/titulo">
+
+        <RelativeLayout
+            android:id="@+id/CaixaBotoes"
+            android:layout_width="371dp"
+            android:layout_height="549dp"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:id="@+id/avaria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Avaria: "
+                android:textColor="#000000"
+                android:textSize="30sp" />
+
+            <RelativeLayout
+                android:id="@+id/AvariaOpcoes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/avaria"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:background="@color/white"
+                android:layout_marginTop="3dp">
+
+                <CheckBox
+                    android:id="@+id/AvariaEletrica"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Elétrica"
+                    android:textColor="#000000"
+                    android:textSize="22sp" />
+
+                <CheckBox
+                    android:id="@+id/AvariaMecanica"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toEndOf="@id/AvariaEletrica"
+                    android:layout_toRightOf="@id/AvariaEletrica"
+                    android:text="Mecânica"
+                    android:textColor="#000000"
+                    android:textSize="22sp" />
+
+                <CheckBox
+                    android:id="@+id/AvariaSoftware"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toEndOf="@id/AvariaMecanica"
+                    android:layout_toRightOf="@id/AvariaMecanica"
+                    android:text="Software"
+                    android:textColor="#000000"
+                    android:textSize="22sp" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/descricao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/AvariaOpcoes"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="Descrição do Problema: "
+                android:textColor="#000000"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/descricaoBox"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@id/descricao"
+                android:background="@color/white"
+                android:hint="Breve descrição do problema..."
+                android:textSize="25sp"
+                android:layout_marginTop="3dp"/>
+
+
+            <TextView
+                android:id="@+id/data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/descricaoBox"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="Data: "
+                android:textColor="#000000"
+                android:textSize="30sp" />
+
+            <DatePicker
+                android:id="@+id/dataBox"
+                android:layout_width="wrap_content"
+                android:layout_height="106dp"
+                android:layout_below="@id/data"
+                android:layout_centerHorizontal="true"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
+                android:spinnersShown="true"
+                android:startYear="2020"
+                android:background="@color/white"
+                android:layout_marginTop="3dp"/>
+
+
+            <Button
+                android:id="@+id/terminarot"
+                android:layout_width="340dp"
+                android:layout_height="85dp"
+                android:layout_marginTop="40dp"
+                android:layout_below="@id/dataBox"
+                android:layout_centerHorizontal="true"
+                android:text="Criar ordem de trabalho"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                app:backgroundTint="#FDFDFD" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
