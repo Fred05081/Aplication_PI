@@ -11,7 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Qrcode2">
-        <activity android:name=".avaria"></activity>
+        <activity android:name=".adicionar_ficehiros_1" />
+        <activity android:name=".criar_ot" />
+        <activity android:name=".ordem_trabalho_aberta_1" />
+        <activity android:name=".conferencia" />
+        <activity android:name=".avaria" />
         <activity android:name=".info" />
         <activity android:name=".video" />
         <activity android:name=".pdf" />

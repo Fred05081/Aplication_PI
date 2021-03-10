@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,10 +20,11 @@ import java.awt.font.TextAttribute;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private IntentIntegrator qrScan;
-    private Button buttonScan;
+    private Button buttonScan, next ,video;
+    private EditText texto;
     public String id=null;
     public int num=0;
-    private TextView texto;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +32,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         buttonScan = findViewById(R.id.Scann);
-        texto=findViewById(R.id.texto);
+        next=findViewById(R.id.id_maquina);
+        video=findViewById(R.id.videochamada);
+        texto=findViewById(R.id.ID);
 
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openButtScan();
+            }
+        });
+
+        video.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openconferencia();
+            }
+        });
         qrScan = new IntentIntegrator(this);
         buttonScan.setOnClickListener(this);
         openButtScan();
@@ -42,25 +59,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
         if (result != null) {
-            //if qrcode has nothing in it
+
             if (result.getContents() == null) {
                 Toast.makeText(this, "Result Not Found", Toast.LENGTH_LONG).show();
             } else {
-                //if qr contains data
+
                 num=1;
                 try {
-                    //converting the data to json
                     JSONObject obj = new JSONObject(result.getContents());
-                    //setting values to textviews
-                    texto.setText(obj.getString("id"));
                     id=obj.getString("id");
                     openButtScan();
                 } catch (JSONException e) {
                     e.printStackTrace();
-                    //if control comes here
-                    //that means the encoded format not matches
-                    //in this case you can display whatever data is available on the qrcode
-                    //to a toast
                     Toast.makeText(this, result.getContents(), Toast.LENGTH_LONG).show();
                 }
             }
@@ -75,9 +85,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
     public void openButtScan(){
 
-        Intent intent=new Intent(this, Menu.class);
+        Intent intent=new Intent(this, qrcode.class);
        
         startActivity(intent);
 
     }
+    public void openconferencia(){
+
+        Intent intent =new Intent(this, conferencia.class);
+        startActivity(intent);
+    }
+
 }

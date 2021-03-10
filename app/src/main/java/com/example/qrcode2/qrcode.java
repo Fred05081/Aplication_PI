@@ -17,6 +17,7 @@ public class qrcode extends AppCompatActivity {
         button1=findViewById(R.id.ot);
         button2=findViewById(R.id.ficheiros);
         button3=findViewById(R.id.historico);
+
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,7 +41,7 @@ public class qrcode extends AppCompatActivity {
     }
 
     public void open1(){
-        Intent intent=new Intent(this,ordem_trabalho.class);
+        Intent intent=new Intent(this,lista_ota.class);
 
         startActivity(intent);
 
