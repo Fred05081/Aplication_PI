@@ -13,14 +13,17 @@
         android:theme="@style/Theme.Qrcode2">
         <activity android:name=".adicionar_ficehiros_1" />
         <activity android:name=".criar_ot" />
+        <activity android:name=".ficheiros" />
         <activity android:name=".ordem_trabalho_aberta_1" />
         <activity android:name=".conferencia" />
+        <activity android:name=".lista_ota" />
         <activity android:name=".avaria" />
         <activity android:name=".info" />
+        <activity android:name=".foto" />
         <activity android:name=".video" />
         <activity android:name=".pdf" />
         <activity android:name=".historico" />
-        <activity android:name=".Menu" />
+        <activity android:name=".qrcode" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

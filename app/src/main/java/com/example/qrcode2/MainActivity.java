@@ -51,7 +51,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
         qrScan = new IntentIntegrator(this);
         buttonScan.setOnClickListener(this);
-        openButtScan();
 
 
     }
