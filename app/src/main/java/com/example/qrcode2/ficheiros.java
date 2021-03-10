@@ -15,6 +15,8 @@ public class ficheiros extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ficheiros);
 
+        getSupportActionBar().hide();
+
         button1=findViewById(R.id.infoMaquina);
         button2=findViewById(R.id.foto);
         button3=findViewById(R.id.videos);

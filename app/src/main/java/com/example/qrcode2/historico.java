@@ -24,6 +24,8 @@ public class historico extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_historico);
 
+        getSupportActionBar().hide();
+
         texto=findViewById(R.id.hist);
 
 

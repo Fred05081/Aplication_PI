@@ -10,5 +10,7 @@ public class criar_ot extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.criar_ot);
+
+        getSupportActionBar().hide();
     }
 }

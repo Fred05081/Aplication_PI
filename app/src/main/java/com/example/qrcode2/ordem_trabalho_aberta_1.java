@@ -10,5 +10,7 @@ public class ordem_trabalho_aberta_1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ordem_trabalho_aberta_1);
+        getSupportActionBar().hide();
+
     }
 }

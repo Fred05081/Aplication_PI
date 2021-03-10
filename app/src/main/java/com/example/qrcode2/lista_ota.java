@@ -15,6 +15,8 @@ public class lista_ota extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_ota);
 
+        getSupportActionBar().hide();
+
         criar_ot=findViewById(R.id.criar_ot);
         ultimasman=findViewById(R.id.ultimas_man);
         criar_ot.setOnClickListener(new View.OnClickListener() {
