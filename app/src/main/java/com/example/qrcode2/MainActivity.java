@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        getSupportActionBar().hide();
+
         buttonScan = findViewById(R.id.Scann);
         next=findViewById(R.id.id_maquina);
         video=findViewById(R.id.videochamada);
