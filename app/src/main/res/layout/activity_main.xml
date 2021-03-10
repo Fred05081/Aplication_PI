@@ -29,7 +29,7 @@
                 android:contentDescription="@string/ScannerIcon"/>
 
             <Button
-                android:id="@+id/scann"
+                android:id="@+id/Scann"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_below="@id/ScanIcon"
