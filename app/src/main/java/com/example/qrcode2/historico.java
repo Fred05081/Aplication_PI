@@ -30,7 +30,7 @@ public class historico extends AppCompatActivity {
 
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.1.78:8000/")
+                .baseUrl("http://192.168.1.5:8000/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
