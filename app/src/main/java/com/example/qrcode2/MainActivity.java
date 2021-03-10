@@ -24,12 +24,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public int num=0;
     private TextView texto;
 
+    // Pila
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        buttonScan = findViewById(R.id.Scann);
+        buttonScan = findViewById(R.id.scann);
         texto=findViewById(R.id.texto);
 
         qrScan = new IntentIntegrator(this);
