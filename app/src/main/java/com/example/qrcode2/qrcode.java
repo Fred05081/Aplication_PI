@@ -37,7 +37,7 @@ public class qrcode extends AppCompatActivity {
             }
         });
 
-//mexer
+
     }
 
     public void open1(){
