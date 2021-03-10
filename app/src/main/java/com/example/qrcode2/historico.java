@@ -19,6 +19,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class historico extends AppCompatActivity {
     private TextView texto;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +46,8 @@ public class historico extends AppCompatActivity {
             @Override
             public void onResponse(Call<PostList> call, Response<PostList> response) {
                 List<Post> posts = response.body().getList();
-                for(Post post : posts){
+
+                for (Post post : posts) {
                     String content ="\n";
                     content += "avaria : " + post.getAvaria() + "\n";
                     content += "idmaquina : " + post.getIdmaquina() + "\n";
@@ -55,9 +57,10 @@ public class historico extends AppCompatActivity {
                     content += "solicitante : " + post.getSolicitante() + "\n";
                     content += "planificador : " + post.getPlanificador() + "\n";
                     texto.append(content);
+
+
                 }
             }
-
             @Override
             public void onFailure(Call<PostList> call, Throwable t) {
                 texto.setText(t.getMessage());
