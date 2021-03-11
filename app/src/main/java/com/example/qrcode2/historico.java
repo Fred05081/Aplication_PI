@@ -3,6 +3,7 @@ package com.example.qrcode2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -30,6 +31,7 @@ public class historico extends AppCompatActivity {
         texto=findViewById(R.id.hist);
 
 
+
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://192.168.1.5:8000/")
                 .addConverterFactory(GsonConverterFactory.create())
@@ -48,6 +50,8 @@ public class historico extends AppCompatActivity {
                 List<Post> posts = response.body().getList();
 
                 for (Post post : posts) {
+
+                    // fazer print de tudo ----> esperar
                     String content ="\n";
                     content += "avaria : " + post.getAvaria() + "\n";
                     content += "idmaquina : " + post.getIdmaquina() + "\n";
@@ -59,7 +63,48 @@ public class historico extends AppCompatActivity {
                     texto.append(content);
 
 
+                    //processo de filtragem pelo tipo de avaria, e pelo numero da maquina  no caso 3145
+                    /*if(post.getAvaria().equals("mecanico")){
+                        String content ="\n";
+                        content += "avaria : " + post.getAvaria() + "\n";
+                        content += "idmaquina : " + post.getIdmaquina() + "\n";
+                        content += "dataAbertura : " + post.getDataabertura() + "\n";
+                        content += "datafecho : " + post.getDatafecho() + "\n";
+                        content += "problema : " + post.getProblema() + "\n";
+                        content += "solicitante : " + post.getSolicitante() + "\n";
+                        content += "planificador : " + post.getPlanificador() + "\n";
+                        texto.append(content);
+
+                    }
+                    if(post.getAvaria().equals("eletrico")){
+                        String content ="\n";
+                        content += "avaria : " + post.getAvaria() + "\n";
+                        content += "idmaquina : " + post.getIdmaquina() + "\n";
+                        content += "dataAbertura : " + post.getDataabertura() + "\n";
+                        content += "datafecho : " + post.getDatafecho() + "\n";
+                        content += "problema : " + post.getProblema() + "\n";
+                        content += "solicitante : " + post.getSolicitante() + "\n";
+                        content += "planificador : " + post.getPlanificador() + "\n";
+                        texto.append(content);
+
+                    }
+                    if(post.getAvaria().equals("software")){
+                        String content ="\n";
+                        content += "avaria : " + post.getAvaria() + "\n";
+                        content += "idmaquina : " + post.getIdmaquina() + "\n";
+                        content += "dataAbertura : " + post.getDataabertura() + "\n";
+                        content += "datafecho : " + post.getDatafecho() + "\n";
+                        content += "problema : " + post.getProblema() + "\n";
+                        content += "solicitante : " + post.getSolicitante() + "\n";
+                        content += "planificador : " + post.getPlanificador() + "\n";
+                        texto.append(content);
+
+                    }
+                    */
+
+
                 }
+
             }
             @Override
             public void onFailure(Call<PostList> call, Throwable t) {
