@@ -54,7 +54,9 @@ public class qrcode extends AppCompatActivity {
     }
     public void open3(){
         Intent intent=new Intent(this,historico.class);
-
+        Intent i = getIntent();
+        String inter=i.getStringExtra("idmaquina");
+        intent.putExtra("idmaquina",inter);
         startActivity(intent);
 
     }

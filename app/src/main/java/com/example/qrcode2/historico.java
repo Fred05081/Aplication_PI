@@ -2,6 +2,7 @@ package com.example.qrcode2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
@@ -38,12 +39,13 @@ public class historico extends AppCompatActivity {
                 .build();
 
         JsonPlaceHolderApi jsonPlaceHolderApi = retrofit.create(JsonPlaceHolderApi.class);
-
+        Intent i = getIntent();
+        String inter=i.getStringExtra("idmaquina");
         //
         //Map<String,String> parameters = new HashMap<>();
         //parameters.put("idmaquina","3456");
         //
-        Call<PostList> call = jsonPlaceHolderApi.getPosts("3145");
+        Call<PostList> call = jsonPlaceHolderApi.getPosts(inter);
         call.enqueue(new Callback<PostList>() {
             @Override
             public void onResponse(Call<PostList> call, Response<PostList> response) {
