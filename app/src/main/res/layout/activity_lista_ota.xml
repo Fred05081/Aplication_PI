@@ -20,51 +20,12 @@
             android:layout_width="374dp"
             android:layout_height="wrap_content">
 
-            <Button
-                android:id="@+id/ot1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:text="Ordem de trabalho x"
-                android:textColor="#000000"
-                android:textSize="25sp"
-                app:backgroundTint="#FDFDFD" />
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:id="@+id/ListaOTAs"
+                android:background="@color/white"/>
 
-            <Button
-                android:id="@+id/ot2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/ot1"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
-                android:text="Ordem de trabalho y"
-                android:textColor="#000000"
-                android:textSize="25sp"
-                app:backgroundTint="#FDFDFD" />
-
-            <Button
-                android:id="@+id/ot3"
-                android:layout_width="363dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/ot2"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
-                android:text="Ordem de trabalho z"
-                android:textColor="#000000"
-                android:textSize="25sp"
-                app:backgroundTint="#FDFDFD" />
-
-            <Button
-                android:id="@+id/ot4"
-                android:layout_width="363dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/ot3"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
-                android:text="Ordem de trabalho w"
-                android:textColor="#000000"
-                android:textSize="25sp"
-                app:backgroundTint="#FDFDFD" />
 
         </RelativeLayout>
 
@@ -73,7 +34,7 @@
             android:layout_width="381dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/BotoesDeCima"
-            android:layout_marginTop="141dp">
+            android:layout_marginTop="50dp">
 
             <Button
                 android:id="@+id/ultimas_man"
