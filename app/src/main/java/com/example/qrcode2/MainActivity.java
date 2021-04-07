@@ -102,8 +102,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 try {
                     JSONObject obj = new JSONObject(result.getContents());
                     id=obj.getString("id");
+                    Call<PostList> call = jsonPlaceHolderApi.getPosts(id);
+                    call.enqueue(new Callback<PostList>() {
+                        @Override
+                        public void onResponse(Call<PostList> call, Response<PostList> response) {
+                            List<Post> posts = response.body().getList();
 
-                    openButtScan();
+                            for (Post post : posts) {
+                                idmaquina="";
+                                idmaquina=post.getIdmaquina();
+                                if(idmaquina.equals(id)){
+                                    openButtScan();
+                                }
+                            }
+                        }
+
+                        @Override
+                        public void onFailure(Call<PostList> call, Throwable t) {
+
+                        }
+                    });
+
                 } catch (JSONException e) {
                     e.printStackTrace();
                     Toast.makeText(this, result.getContents(), Toast.LENGTH_LONG).show();
@@ -134,7 +153,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
     public void openconferencia(){
 
-        Intent intent =new Intent(this, conferencia.class);
+        Intent intent =new Intent(this, video.class);
         startActivity(intent);
     }
 

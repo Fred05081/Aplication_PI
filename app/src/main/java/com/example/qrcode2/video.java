@@ -1,13 +1,10 @@
 package com.example.qrcode2;
 //package com.example.jitsimeet;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 
-import com.example.qrcode2.R;
+import androidx.appcompat.app.AppCompatActivity;
 
 import org.jitsi.meet.sdk.JitsiMeetActivity;
 import org.jitsi.meet.sdk.JitsiMeetConferenceOptions;

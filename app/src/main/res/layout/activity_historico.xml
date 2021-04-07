@@ -25,9 +25,10 @@
 
             <TextView
                 android:id="@+id/hist"
+                android:layout_below="@id/titulo"
                 android:layout_width="match_parent"
                 android:textSize="20dp"
-                android:layout_below="@id/titulo"
+
                 android:layout_height="750dp"/>
 
         </LinearLayout>
