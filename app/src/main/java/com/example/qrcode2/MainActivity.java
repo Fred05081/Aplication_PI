@@ -29,8 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private IntentIntegrator qrScan;
     private Button buttonScan, next ,video;
     private EditText texto;
-    public String id=null, idmaquina;
-    public int num=0;
+    public String id, idmaquina;
     private JsonPlaceHolderApi jsonPlaceHolderApi;
     public String id_maquina;
     @Override
@@ -84,6 +83,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 openconferencia();
             }
         });
+
+
         qrScan = new IntentIntegrator(this);
         buttonScan.setOnClickListener(this);
 
@@ -98,8 +99,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Toast.makeText(this, "Result Not Found", Toast.LENGTH_LONG).show();
             } else {
 
-                num=1;
+
                 try {
+                    Retrofit retrofit = new Retrofit.Builder()
+                            .baseUrl("http://192.168.1.5:8000/")
+                            .addConverterFactory(GsonConverterFactory.create())
+                            .build();
+
+                    JsonPlaceHolderApi jsonPlaceHolderApi = retrofit.create(JsonPlaceHolderApi.class);
+
                     JSONObject obj = new JSONObject(result.getContents());
                     id=obj.getString("id");
                     Call<PostList> call = jsonPlaceHolderApi.getPosts(id);
@@ -123,6 +131,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         }
                     });
 
+
+                    openButtScan();
                 } catch (JSONException e) {
                     e.printStackTrace();
                     Toast.makeText(this, result.getContents(), Toast.LENGTH_LONG).show();
