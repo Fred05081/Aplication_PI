@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.BaseBundle;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,6 +31,7 @@ import com.bumptech.glide.annotation.GlideModule;
 import com.bumptech.glide.module.AppGlideModule;
 public class foto extends AppCompatActivity {
     GridView gridView;
+   public String idmaquina;
     private List<ImagesResponse>imagesResponseList=new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +41,7 @@ public class foto extends AppCompatActivity {
         getSupportActionBar().hide();
         getAllimages();
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 startActivity(new Intent(foto.this,click.class).putExtra("data",imagesResponseList.get(i)) );
@@ -54,7 +57,6 @@ public class foto extends AppCompatActivity {
                 if(response.isSuccessful()){
 
                     imagesResponseList = response.body();
-
                     CustomAdapter customAdapter=new CustomAdapter(imagesResponseList,foto.this);
                     gridView.setAdapter(customAdapter);
                 }else{
@@ -104,11 +106,17 @@ public class foto extends AppCompatActivity {
             }
             ImageView imageView=view.findViewById(R.id.imageView);
             TextView textView= view.findViewById(R.id.textView);
-            textView.setText(imagesResponseList.get(i).getIdmaquina());
+            idmaquina="";
+            idmaquina=imagesResponseList.get(i).getIdmaquina();
 
-           Glide.with(context)
-                .load(imagesResponseList.get(i).getImage())
-                   .into(imageView);
+            if(idmaquina.equals("3311")){
+                textView.setText(imagesResponseList.get(i).getIdmaquina());
+
+                Glide.with(context)
+                        .load(imagesResponseList.get(i).getImage())
+                        .into(imageView);
+            }
+
 
             return view;
         }

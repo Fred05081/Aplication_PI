@@ -26,9 +26,10 @@ public class click extends AppCompatActivity {
         if(intent.getExtras() != null){
             imageResponse= (ImagesResponse) intent.getSerializableExtra("data");
             Nome.setText(imageResponse.getIdmaquina());
-
-            Glide.with(this).load(imageResponse.getImage()).into(imageView);
-
+            String idmaquina=imageResponse.getIdmaquina();
+            if(idmaquina.equals("3311")) {
+                Glide.with(this).load(imageResponse.getImage()).into(imageView);
+            }
         }
 
     }
