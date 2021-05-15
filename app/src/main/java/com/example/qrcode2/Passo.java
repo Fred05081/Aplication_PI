@@ -3,20 +3,19 @@ package com.example.qrcode2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
-import android.content.Intent;
-import android.os.BaseBundle;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.GridLayout;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,39 +23,36 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.annotation.GlideModule;
-import com.bumptech.glide.module.AppGlideModule;
-public class foto extends AppCompatActivity {
+public class Passo extends AppCompatActivity {
+
+    public EditText passo1,info;
     GridView gridView;
-   public String idmaquina;
-   private Button button;
+    public int count = 1;
+    public Button ProximoPasso;
+    public String passo,infor;
+
     private List<ImagesResponse>imagesResponseList=new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_foto);
-        gridView = findViewById(R.id.gridView);
-        button =findViewById(R.id.butt11);
+        setContentView(R.layout.activity_passo);
+        passo1=findViewById(R.id.passo1);
+        info=findViewById(R.id.passo11);
+        gridView = findViewById(R.id.grid1);
 
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openPasso();
-            }
-        });
+        ProximoPasso=findViewById(R.id.butaoPasso);
+
         getSupportActionBar().hide();
         getAllimages();
-        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
+        ProximoPasso.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                startActivity(new Intent(foto.this,click.class).putExtra("data",imagesResponseList.get(i)) );
+            public void onClick(View view) {
+                getAllimages();
+                count = count + 1;
             }
         });
+
     }
 
     public void getAllimages(){
@@ -67,8 +63,9 @@ public class foto extends AppCompatActivity {
                 if(response.isSuccessful()){
 
                     imagesResponseList = response.body();
-                    CustomAdapter customAdapter=new CustomAdapter(imagesResponseList,foto.this);
+                    CustomAdapter customAdapter=new CustomAdapter(imagesResponseList,Passo.this);
                     gridView.setAdapter(customAdapter);
+
                 }else{
 
                 }
@@ -81,10 +78,10 @@ public class foto extends AppCompatActivity {
         });
     }
 
-    public class CustomAdapter extends BaseAdapter{
-    private List<ImagesResponse>imagesResponseList;
-    private Context context;
-    private LayoutInflater layoutInflater;
+    public class CustomAdapter extends BaseAdapter {
+        private List<ImagesResponse>imagesResponseList;
+        private Context context;
+        private LayoutInflater layoutInflater;
 
         public CustomAdapter(List<ImagesResponse> imagesResponseList, Context context) {
             this.imagesResponseList = imagesResponseList;
@@ -115,26 +112,22 @@ public class foto extends AppCompatActivity {
 
             }
             ImageView imageView=view.findViewById(R.id.imageView);
-            TextView textView= view.findViewById(R.id.textView);
-            idmaquina="";
-            idmaquina=imagesResponseList.get(i).getIdmaquina();
 
-            if(idmaquina.equals("392098")){
-                textView.setText(imagesResponseList.get(i).getIdmaquina());
+            passo="";
+            infor="";
+            passo=imagesResponseList.get(i).getPasso();
+            infor=imagesResponseList.get(i).getInfo();
 
+            if(passo.equals(String.valueOf(count))){
+
+                passo1.setText("Passo "+ passo);
+                info.setText(" " + infor );
                 Glide.with(context)
                         .load(imagesResponseList.get(i).getImage())
                         .into(imageView);
-            }
-
+           }
 
             return view;
         }
     }
-    public void openPasso(){
-        Intent intent=new Intent(this,Passo.class);
-        startActivity(intent);
-
-    }
 }
-

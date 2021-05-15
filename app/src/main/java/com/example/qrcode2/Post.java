@@ -3,7 +3,7 @@ package com.example.qrcode2;
 import com.google.gson.annotations.SerializedName;
 
 public class Post {
-    private int id;
+    private Integer id;
 
 
 
@@ -27,6 +27,16 @@ public class Post {
 
     @SerializedName("planificador")
     private String planificador;
+
+    public Post(String idmaquina, String avaria, String dataabertura, String datafecho, String problema, String solicitante, String planificador) {
+        this.idmaquina = idmaquina;
+        this.avaria = avaria;
+        this.dataabertura = dataabertura;
+        this.datafecho = datafecho;
+        this.problema = problema;
+        this.solicitante = solicitante;
+        this.planificador = planificador;
+    }
 
     public int getId() {
         return id;

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fechar">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/avaria"
+        android:text="avaria"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:layout_marginTop="5dp"
+        android:textSize="35dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/avaria1"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ/"
+        android:layout_below="@id/avaria"
+        android:hint="Avaria"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:inputType="number"
+        android:autofillHints="@string/ID"/>
+
+    ////////
+    <TextView
+        android:id="@+id/idmaquina"
+        android:text="idmaquina"
+        android:textAlignment="center"
+        android:layout_below="@id/avaria1"
+        android:textColor="#000000"
+        android:layout_marginTop="5dp"
+        android:textSize="35dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/idmaquina1"
+        android:layout_below="@id/idmaquina"
+        android:hint="idmaquina"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:inputType="number"
+
+        android:autofillHints="@string/ID"/>
+    /////////////////////////
+    <TextView
+        android:id="@+id/dataabertura"
+        android:text="dataabertura"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:layout_marginTop="5dp"
+        android:textSize="35dp"
+        android:layout_below="@id/idmaquina1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ/"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/dataabertura1"
+        android:layout_below="@id/dataabertura"
+        android:hint="dd/mm/aa"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:inputType="number"
+        android:autofillHints="@string/ID"/>
+    //////////////////////////////////
+    <TextView
+        android:id="@+id/datafecho"
+
+        android:text="datafecho"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:layout_marginTop="5dp"
+        android:textSize="35dp"
+        android:layout_below="@id/dataabertura1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/datafecho1"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ/"
+        android:layout_below="@id/datafecho"
+        android:hint="dd/mm/aa"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:inputType="number"
+        android:autofillHints="@string/ID"/>
+    <TextView
+        android:id="@+id/problema"
+        android:text="problema"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:layout_marginTop="5dp"
+        android:textSize="35dp"
+        android:layout_below="@id/datafecho1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/problema1"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ/"
+        android:layout_below="@id/problema"
+        android:hint="Problema"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:inputType="number"
+        android:autofillHints="@string/ID"/>
+    <TextView
+        android:id="@+id/solicitante"
+        android:text="solicitante"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:layout_marginTop="5dp"
+        android:textSize="35dp"
+
+        android:layout_below="@id/problema1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/solicitante1"
+        android:layout_below="@id/solicitante"
+        android:hint="Avaria"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ/"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:inputType="number"
+        android:autofillHints="@string/ID"/>
+    <TextView
+        android:id="@+id/planificador"
+        android:text="Planificador"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:layout_marginTop="5dp"
+        android:textSize="35dp"
+        android:layout_below="@id/solicitante1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/planificador1"
+        android:layout_below="@id/planificador"
+        android:hint="Avaria"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ/"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:inputType="number"
+        android:autofillHints="@string/ID"/>
+
+    <Button
+        android:layout_width="match_parent"
+
+        android:id="@+id/Enviar"
+        android:layout_below="@id/planificador1"
+        android:layout_centerHorizontal="true"
+        android:text="Enviar"
+        android:layout_height="60dp"
+        />
+
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Passo">
+
+
+
+                <EditText
+                    android:id="@+id/passo1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:textSize="35dp" />
+                <EditText
+                    android:id="@+id/passo11"
+                    android:layout_below="@id/passo1"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_centerHorizontal="true"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:textSize="20dp" />
+
+                <GridView
+                    android:id="@+id/grid1"
+                    android:layout_below="@id/passo11"
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp"
+                    android:layout_margin="1dp"
+                    android:horizontalSpacing="4dp"
+                    android:numColumns="2" />
+                <Button
+                    android:id="@+id/butaoPasso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/grid1"
+                    android:text="Proximo Passo"
+                    android:textColor="#000000"
+                    android:textSize="35dp"
+                    android:layout_centerHorizontal="true"/>
+
+
+
+</RelativeLayout>

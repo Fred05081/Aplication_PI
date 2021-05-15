@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class lista_ota extends AppCompatActivity {
-    private Button criar_ot,ultimasman;
+    private Button criar_ot,ultimasman, fechar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,9 +16,15 @@ public class lista_ota extends AppCompatActivity {
         setContentView(R.layout.activity_lista_ota);
 
         getSupportActionBar().hide();
-
+        fechar=findViewById(R.id.fecharordem);
         criar_ot=findViewById(R.id.criar_ot);
         ultimasman=findViewById(R.id.ultimas_man);
+        fechar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openFechar();
+            }
+        });
         criar_ot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,6 +49,12 @@ public class lista_ota extends AppCompatActivity {
 
     public void openUlt(){
         Intent intent=new Intent(this, historico.class);
+        startActivity(intent);
+
+    }
+
+    public void openFechar(){
+        Intent intent=new Intent(this, fechar.class);
         startActivity(intent);
 
     }

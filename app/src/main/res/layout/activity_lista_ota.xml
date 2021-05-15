@@ -11,7 +11,7 @@
         android:id="@+id/ButtonsBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/titulo"
+        android:layout_below="@id/fecharordem"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="57dp">
 
@@ -73,4 +73,16 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:gravity="center_horizontal" />
+
+    <Button
+        android:layout_centerHorizontal="true"
+        android:id="@+id/fecharordem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@id/titulo"
+        android:text="fechar ordem "
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:backgroundTint="#FDFDFD" />
 </RelativeLayout>
